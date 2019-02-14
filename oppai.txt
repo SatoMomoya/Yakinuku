@@ -1,2 +1,10 @@
 tinkos
+<<<<<<< HEAD
 Hello!EveryOne!
+=======
+<<<<<<< HEAD
+mofumofu
+=======
+ケモナーは正義
+>>>>>>> opppai
+>>>>>>> b4daa5892f67d417a058899eb61571d87fe6c14d
