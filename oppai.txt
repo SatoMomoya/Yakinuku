@@ -1,2 +1,6 @@
 tinkos
+<<<<<<< HEAD
 mofumofu
+=======
+ケモナーは正義
+>>>>>>> opppai
