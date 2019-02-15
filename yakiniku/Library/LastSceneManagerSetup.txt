@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Okumura/Scene/EnemyScene.unity
+- path: Assets/Scenes/PlayScene.unity
   isLoaded: 1
   isActive: 1
