@@ -13,6 +13,12 @@ namespace Momoya
         private float RotationalSpeed; //回転速度
         //変数の宣言
         private Vector3 requestAngle;    //要求されている角度
+
+        public override void Initialize()
+        {
+            //ここに初期化処理
+        }
+
         public override void Move()
         {
             if(Input.GetKey(KeyCode.LeftArrow))

@@ -48,6 +48,8 @@ namespace Momoya
 
             this.flag = GetComponent<Flag>();  //フラグをゲットコンポーネント
             this.rotation = Quaternion.Euler(angle); //オイラー角からクオータニオンへ変換
+
+            Initialize(); //初期化
         }
 
         // Update is called once per frame
@@ -101,6 +103,12 @@ namespace Momoya
             {
                 this.transform.position = startPos;
             }
+
+        }
+
+        //初期化関数(子クラス用)
+        public virtual void Initialize()
+        {
 
         }
 
