@@ -322,6 +322,7 @@ MonoBehaviour:
   speed: 2
   jumpPower: 0
   RotationalSpeed: 3
+  MouseDistance: 10
 --- !u!114 &1445833824
 MonoBehaviour:
   m_ObjectHideFlags: 0
