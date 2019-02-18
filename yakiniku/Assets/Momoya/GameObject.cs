@@ -15,13 +15,13 @@ namespace Momoya
         protected float jumpPower;              //ジャンプパワー
 
         //変数の宣言
- 
-        protected Vector3 startPos;     //モンスターの初期位置
-        protected Vector3 pos;          //モンスターのポジション
-        protected Vector3 vec;          //モンスターのベクトル
-        protected Vector3 angle;        //モンスターのアングル
-        protected Quaternion rotation;  //モンスターのローテーション
-        protected Flag flag;            //フラグ
+        protected Rigidbody rb;         // Rigidbody
+        protected Vector3 startPos;     // モンスターの初期位置
+        protected Vector3 pos;          // モンスターのポジション
+        protected Vector3 vec;          // モンスターのベクトル
+        protected Vector3 angle;        // モンスターのアングル
+        protected Quaternion rotation;  // モンスターのローテーション
+        protected Flag flag;            // フラグ
        
        
 
@@ -48,6 +48,8 @@ namespace Momoya
 
             this.flag = GetComponent<Flag>();  //フラグをゲットコンポーネント
             this.rotation = Quaternion.Euler(angle); //オイラー角からクオータニオンへ変換
+
+     //       rb = this.GetComponent<Rigidbody>();
 
             Initialize(); //初期化
         }
@@ -143,6 +145,27 @@ namespace Momoya
             }
         }
 
+
+        //2つのポジションから角度(radian)を返す関数
+        public float SetAim(Vector2 p1, Vector2 p2)
+        {
+            return SetAim(p1.x, p1.y, p2.x, p2.y);
+        }
+        public float SetAim(Vector3 p1, Vector3 p2)
+        {
+            return SetAim(p1.x, p1.z, p2.x, p2.z);
+        }
+        public float SetAim(float p1x, float p1y, float p2x, float p2y)
+        {
+            float dx = p2x - p1x;
+            //  Debug.Log(dx);
+            float dy = p2y - p1y;
+            //  Debug.Log(dy);
+            float radangle = Mathf.Atan2(dy, dx);
+
+            return radangle;
+
+        }
     }
 
 }

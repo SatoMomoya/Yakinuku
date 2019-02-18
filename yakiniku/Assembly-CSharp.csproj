@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Momoya\Flag.cs" />
     <Compile Include="Assets\Momoya\GameObject.cs" />
+    <Compile Include="Assets\Momoya\Needle.cs" />
     <Compile Include="Assets\Momoya\Player.cs" />
     <Compile Include="Assets\Okumura\charamove.cs" />
     <Compile Include="Assets\Okumura\EnemyMove.cs" />

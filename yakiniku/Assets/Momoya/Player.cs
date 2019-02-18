@@ -60,24 +60,13 @@ namespace Momoya
             //マウスの座標を入れる
             mousePos = Input.mousePosition;
             mousePos.z = MouseDistance;
+            
             //マウス座標をスクリーンからワールド座標へ変換
-            screenToWorldPos = Camera.main.ScreenToWorldPoint(mousePos);
-            Debug.Log(screenToWorldPos);
+            screenToWorldPos = Camera.main.ScreenToWorldPoint(mousePos + offSet);
         }
 
 
-        //2つのポジションから角度(radian)を返す関数
-        public float SetAim(float p1x,float p1y,float p2x,float p2y)
-        {
-            float dx = p2x - p1x;
-          //  Debug.Log(dx);
-            float dy = p2y - p1y;
-          //  Debug.Log(dy);
-            float radangle = Mathf.Atan2(dy, dx);
-          
-            return radangle ;
 
-        }
 
 
         //移動関数

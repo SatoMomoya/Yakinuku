@@ -1,1 +1,2 @@
 C:\Users\S172045\Desktop\yakiniku\yakiniku\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\s172091\Documents\GitHub\yakiniku\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
