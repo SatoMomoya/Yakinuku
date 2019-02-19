@@ -38,5 +38,15 @@ namespace Momoya
 
             //  以上
         }
+
+        //回転させる関数
+        public override void Rotation()
+        {
+          
+            this.rotation = player.GetRotation * rotation;
+
+            this.transform.localRotation = this.rotation;
+        }
+
     }
 }

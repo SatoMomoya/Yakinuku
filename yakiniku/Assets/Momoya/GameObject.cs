@@ -90,6 +90,12 @@ namespace Momoya
             set { angle = value; }
         }
 
+        public Quaternion GetRotation
+        {
+            get { return rotation; }
+        }
+
+
         //ポジションをコントロールする関数
         protected void PositionCtrl()
         {
@@ -117,13 +123,17 @@ namespace Momoya
         //移動する関数
         public abstract void Move();
 
-        public void Rotation()
+        //回転させる関数(オブジェクトによって回転の処理が違う可能性があるので仮想関数)
+        public virtual void Rotation()
         {
             //回転に必要な値をangleからもってくる
-            rotation = Quaternion.Euler(angle);
+            Vector3 tmpVec = new Vector3(0.0f, 0.0f, 0.0f);
+
+            rotation = Quaternion.Euler(angle * (Mathf.Rad2Deg) - tmpVec);
+
             this.transform.localRotation = rotation;
         }
-
+    
         //何かと当たった時の関数
         protected void OnCollisionEnter(Collision collision)
         {
