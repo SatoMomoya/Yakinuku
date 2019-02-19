@@ -92,8 +92,8 @@ namespace Momoya
         private void Movement()
         {
             ////与えられた角度(y軸)の方向を向いて移動する
-            vec.x = Mathf.Cos(angle.y) * speed;
-            vec.z = Mathf.Sin(angle.y) * speed;
+            vec.x = Mathf.Sin(angle.y) * speed;
+            vec.z = Mathf.Cos(angle.y) * speed;
 
         }
     }
