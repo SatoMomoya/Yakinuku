@@ -22,8 +22,8 @@ namespace Momoya
         protected Vector3 angle;        // モンスターのアングル
         protected Quaternion rotation;  // モンスターのローテーション
         protected Flag flag;            // フラグ
-       
-       
+        private string hitTag;          //当たっているタグ
+
 
         protected enum StateFlag //状態のフラグ
         {
@@ -95,6 +95,13 @@ namespace Momoya
             get { return rotation; }
         }
 
+        //フラグをゲットするプロパティ 
+        public Flag GetFlag
+        {
+            get { return flag; }
+        }
+
+
 
         //ポジションをコントロールする関数
         protected void PositionCtrl()
@@ -137,6 +144,9 @@ namespace Momoya
         //何かと当たった時の関数
         protected void OnCollisionEnter(Collision collision)
         {
+            //当たったオブジェクトのタグをhitTagに入れる
+            hitTag = collision.gameObject.tag;
+
             //当たった何かのタグを調べる
             switch (collision.transform.tag)
             {

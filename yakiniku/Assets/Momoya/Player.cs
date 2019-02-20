@@ -18,17 +18,23 @@ namespace Momoya
         private Vector2 pos2D;        //上から見た場合の座標
 
 
-        private Vector3 mousePos;     //マウス座標
+        private Vector3 mousePos;         //マウス座標
         private Vector3 screenToWorldPos; //スクリーン座標からマウス座標に変換した座標
         private Vector2 screenToWorldPos2D;//2D版
+        
+       
+       
+       
+
         // テスト用　親の前の位置
         private Vector3 oncepos = Vector3.zero;
 
         public override void Initialize()
         {
             // 現在の子の位置を親の前の位置に保存する
-            oncepos = transform.GetChild(0).gameObject.transform.position; 
-      
+            oncepos = transform.GetChild(0).gameObject.transform.position;
+
+            
             //ここに初期化処理
         }
 
@@ -43,19 +49,20 @@ namespace Momoya
             
             //Debug.Log(mousePos);
 
-            //if (Input.GetKey(KeyCode.LeftArrow))
-            //{
-            //    angle.y += RotationalSpeed;
-            //}
-
-            //if (Input.GetKey(KeyCode.RightArrow))
-            //{
-            //    angle.y += -RotationalSpeed;
-            //}
-
-
             Movement(); //移動
 
+
+            if(transform.GetChild(1).GetChild(0).GetComponent<Flag>().Is((uint)StateFlag.Deth))
+            {
+                flag.On((uint)StateFlag.Deth);
+            }
+
+
+            //死亡フラグが立ったら消す
+            if(flag.Is((uint)StateFlag.Deth))
+            {
+                Destroy(this.gameObject);
+            }
 
             //// 親が今の位置と前の位置と異なる場合
             //if (transform.position != oncepos)

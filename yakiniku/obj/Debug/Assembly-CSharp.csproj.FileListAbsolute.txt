@@ -279,3 +279,4 @@ C:\Users\s172091\Documents\GitHub\yakiniku\Temp\bin\Debug\UnityEngine.GoogleAudi
 C:\Users\s172091\Documents\GitHub\yakiniku\Temp\bin\Debug\UnityEngine.SpatialTracking.xml
 C:\Users\s172091\Documents\GitHub\yakiniku\obj\Debug\Assembly-CSharp.dll
 C:\Users\s172091\Documents\GitHub\yakiniku\obj\Debug\Assembly-CSharp.pdb
+C:\Users\s172091\Documents\GitHub\yakiniku\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
