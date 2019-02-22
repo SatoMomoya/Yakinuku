@@ -196,7 +196,6 @@ GameObject:
   - component: {fileID: 28125620553842755}
   - component: {fileID: 28125620553842754}
   - component: {fileID: 28125620553842753}
-  - component: {fileID: 28125620553842752}
   - component: {fileID: 28125620553842759}
   - component: {fileID: 28125620553842758}
   m_Layer: 0
@@ -283,18 +282,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &28125620553842752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 28125620553842757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 159346a3465f14d4abe733fe168535d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &28125620553842759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,11 +318,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 28125619389387485}
     m_Modifications:
-    - target: {fileID: 1798965589353325554, guid: efd2486c15d667042a67c6cd995d0b8b,
-        type: 3}
-      propertyPath: m_Name
-      value: Needle
-      objectReference: {fileID: 0}
     - target: {fileID: 1798965589353325555, guid: efd2486c15d667042a67c6cd995d0b8b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -390,6 +372,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1798965589353325554, guid: efd2486c15d667042a67c6cd995d0b8b,
+        type: 3}
+      propertyPath: m_Name
+      value: Needle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efd2486c15d667042a67c6cd995d0b8b, type: 3}
